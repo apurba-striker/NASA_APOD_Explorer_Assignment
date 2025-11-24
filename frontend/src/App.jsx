@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 
-const API_BASE = 'https://nasa-apod-explorer-assignment.onrender.com';
+const API_BASE = 'https://nasa-apod-explorer-assignment.onrender.com/api/apod';
 
 function App() {
   const [apod, setApod] = useState(null);
