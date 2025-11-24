@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 
-const API_BASE = 'http://localhost:5000/api/apod';
+const API_BASE = 'https://nasa-apod-explorer-assignment.onrender.com';
 
 function App() {
   const [apod, setApod] = useState(null);

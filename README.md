@@ -41,6 +41,11 @@ Follow these instructions to get the project running on your local machine.
     ```bash
     node server.js
     ```
+    Setup environment variables:
+    rename .env.example to .env
+    ```bash
+    cp .env.example .env
+    ``` 
     The backend will run on `http://localhost:5000`.
 
 3.  **Frontend Setup**
@@ -53,7 +58,7 @@ Follow these instructions to get the project running on your local machine.
     ```bash
     npm run dev
     ```
-    
+
     The frontend will typically run on `http://localhost:5173`.
 
 
