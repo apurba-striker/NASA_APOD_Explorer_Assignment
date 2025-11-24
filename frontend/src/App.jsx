@@ -11,7 +11,6 @@ function App() {
   const [view, setView] = useState('daily');
   const [gallery, setGallery] = useState([]);
 
-  // Fetch Single Day
   const fetchApod = async (selectedDate) => {
     setLoading(true);
     setError(null);
@@ -29,8 +28,6 @@ function App() {
       setLoading(false);
     }
   };
-
-  // Fetch Gallery (Last 10 days)
   const fetchGallery = async () => {
     setLoading(true);
     setView('gallery');
@@ -46,7 +43,7 @@ function App() {
       if (!res.ok) throw new Error('Failed to fetch gallery');
 
       const data = await res.json();
-      // Ensure we handle cases where API returns an array (gallery) vs object (error)
+
       if (Array.isArray(data)) {
         setGallery(data.reverse());
       } else {
@@ -86,7 +83,6 @@ function App() {
       {loading && <div className="loader">Loading Space Data...</div>}
       {error && <div className="error">Error: {error}</div>}
 
-      {/* Daily View */}
       {!loading && !error && view === 'daily' && apod && (
         <div className="daily-view">
           <div className="controls">
@@ -119,7 +115,6 @@ function App() {
         </div>
       )}
 
-      {/* Gallery View */}
       {!loading && !error && view === 'gallery' && (
         <div className="gallery-grid">
           {gallery.map((item) => (

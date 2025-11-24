@@ -27,8 +27,8 @@ Follow these instructions to get the project running on your local machine.
 
 1.  **Clone the repository**
     ```bash
-    git clone <repository-url>
-    cd nasa_apod_explorer_assignment
+    git clone https://github.com/apurba-striker/NASA_APOD_Explorer_Assignment.git
+    cd NASA_APOD_Explorer_Assignment
     ```
 
 2.  **Backend Setup**
@@ -53,14 +53,9 @@ Follow these instructions to get the project running on your local machine.
     ```bash
     npm run dev
     ```
+    
     The frontend will typically run on `http://localhost:5173`.
 
-## 🎨 UI & Design
-
-The application features a custom "Space Theme" with:
-- **Fonts**: 'Outfit' for headings and 'Inter' for body text.
-- **Colors**: Deep space blues and purples with neon accents.
-- **Effects**: Glassmorphism cards and hover glow effects.
 
 ## 📝 License
 
