@@ -44,7 +44,7 @@ h3 {
 
 h1 {
   font-size: 3rem;
-  background: linear-gradient(to right, var(--primary), var(--accent));
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -82,7 +82,7 @@ nav button:hover {
 }
 
 nav button.active {
-  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
   border-color: transparent;
   color: white;
   box-shadow: 0 0 20px rgba(114, 9, 183, 0.4);
