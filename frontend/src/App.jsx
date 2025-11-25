@@ -23,11 +23,24 @@ function App() {
       const data = await res.json();
       setApod(data);
     } catch (err) {
-      setError(err.message);
+      const today = new Date().toISOString().split('T')[0];
+
+      if (selectedDate === today) {
+        console.log("Today's image not available yet. Falling back to yesterday.");
+
+        const yesterday = new Date();
+        yesterday.setDate(yesterday.getDate() - 1);
+        const yesterdayStr = yesterday.toISOString().split('T')[0];
+
+        setDate(yesterdayStr);
+      } else {
+        setError(err.message);
+      }
     } finally {
       setLoading(false);
     }
   };
+
   const fetchGallery = async () => {
     setLoading(true);
     setView('gallery');
